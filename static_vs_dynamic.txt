@@ -1,0 +1,71 @@
+⚙️ 1. Static Memory Allocation
+📍Meaning:
+
+Memory is allocated before the program runs (at compile time).
+Size and type are fixed.
+
+💻 Example:
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5];  // static array
+    for(int i=0; i<5; i++){
+        arr[i] = i + 1;
+    }
+    for(int i=0; i<5; i++){
+        cout << arr[i] << " ";
+    }
+}
+
+
+👉 Here, arr has 5 elements — fixed. You can’t make it 10 later without changing the code.
+Memory is automatically handled (you don’t free it yourself).
+
+⚙️ 2. Dynamic Memory Allocation
+📍Meaning:
+
+Memory is allocated at runtime (while the program runs).
+You can choose the size during execution using new (and free it with delete).
+
+💻 Example:
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter size of array: ";
+    cin >> n;
+
+    int *arr = new int[n];  // dynamic array
+
+    for(int i=0; i<n; i++){
+        arr[i] = i + 1;
+    }
+    for(int i=0; i<n; i++){
+        cout << arr[i] << " ";
+    }
+
+    delete[] arr;  // free memory
+}
+
+
+👉 Here:
+
+You decide the size at runtime
+
+You must free it manually using delete[], otherwise — memory leak 😬
+
+🔍 Quick Comparison Table:
+Feature	Static	Dynamic
+Allocation time	Compile time	Runtime
+Size	Fixed	Flexible
+Memory	Stack	Heap
+Created using	Normal declaration	new keyword
+Freed by	Automatically	Manually using delete
+Speed	Faster	Slower (slightly)
+💬 Real-life Example
+
+Static → You book a hotel room in advance for 3 days (fixed).
+
+Dynamic → You decide day by day how long you’ll stay (flexible).
