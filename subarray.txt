@@ -1,0 +1,1 @@
+Subarray are uniquie part of the array.And every subarray is uniquie.[1,2,3]---->[1],[1,2][1,2,3]
