@@ -30,7 +30,7 @@ int main(){
   Node* newhead=new Node(10);
   newhead->Next=Head;
   Head->prev=newhead;
-  cout<<newhead->data;
+  
     
     Node* temp=newhead;
     while(temp!=NULL){
