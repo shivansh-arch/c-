@@ -9,6 +9,6 @@ int main(){
     int n;
     cout<<"Enter the number: "<<" ";
     cin>>n;
-    printnumber(10);
+    printnumber(n);
 
 }
