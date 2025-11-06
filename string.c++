@@ -20,5 +20,17 @@ int main() {
     s2[0] = 'K';
     cout << "Modified s2: " << s2 << endl;
 
+    cout<<"Find sh in name"<<": "<<name.find("sh");
+    cout<<endl;
+
+    string temp = "";
+    if (temp.empty())
+        cout << "temp is empty" << endl;
+    else
+        cout << "temp is not empty" << endl;
+     name.insert(8, " Kumar");  
+    cout << "After insert: " << name << endl;
+
+
     return 0;
 }
