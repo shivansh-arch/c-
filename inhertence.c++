@@ -15,9 +15,16 @@ public:
     }
 };
 
+class C :public B{
+    public:
+    void showC(){ 
+        cout<<"I am C"<<endl;
+    }
+};
 
 int main() {
-    B obj;
+    C obj;
     obj.showA();   
     obj.showB();   
+    obj.showC();
 }
